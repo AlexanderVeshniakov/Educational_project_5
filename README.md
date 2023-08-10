@@ -33,3 +33,39 @@
   * если новая итерация выдала разницу между текущей ошибкой и ошибкой прошлой итерации значение, меньшее, чем `stopping_threshold`;
   * метод должен вернуть финальные значения `w`, `b`, и `mse`.
 
+_________________________________________________________________________________________________________________________________________________
+
+### 1
+- The input compute_derivative function will take the mathematical function 'y = f (x)' of the form 'x * * 2 - x + 21'
+- Returns derivative: '2𝑥−1'
+
+### 2
+The compute_partial_derivative () function will accept:
+- mathematical function 'p = f (x, y)' dependent on two variables of the form '(x-y) * * 2';
+- is the variable by which you want to calculate the partial derivative.
+The function returns a derivative of the selected variable.
+
+### 3
+Suppose we have:
+- is the true value of'y _ true '
+- is the predicted value 'y _ pred' described by a linine equation of the form 'y _ pred = w * x + b'
+1. Derive the square deviation formula between the true and predicted values.
+2. Calculate the partial derivatives of the resulting square deviation formula over the variables' w'and' b '.
+
+### 4
+1. This time you need to write the class 'Gradient ()', which will consist of several methods. Object at
+initialization gets two vectors: 'X', 'Y'. Further, methods refer to them already inside the class:
+* 'predict': at the input it receives 'w','b', at the output it produces predictive values ​of ' Y _ pred ';
+* 'mse': it receives 'Y _ pred' at the input, gives the calculated MSE to the output;
+* 'update': It receives 'w', 'b', and' a'as input (our learning rate). Make the default value'A = 0.0001 '. A on
+the output of the method produces new values ​ ​ of 'w','b', which have been updated due to the calculated gradients.
+2. Check the operation of the methods by supplying two vectors 'X', 'Y' and the initial parameters 'w', 'b' to the required methods to the class input.
+
+### 5
+We upgrade the code so that the'optimize' method appears. At the input, the method takes 'num_iterations',
+`stopping_threshold=80`, `a=0.000001`.
+The method must iteratively go through some number of times to update the values ​ ​ of 'w', 'b',
+having reached the optimal value. Stopping criteria:
+* if the number of predefined iterations 'num _ iterations' has been exceeded;
+* if the new iteration returned a difference between the current error and the previous iteration error of less than 'stopping _ threshold';
+* method must return the final values 'w','b', and 'mse'.
